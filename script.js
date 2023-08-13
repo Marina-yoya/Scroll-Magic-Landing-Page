@@ -3,7 +3,7 @@
 $(document).ready(function () {
     const controller = new ScrollMagic.Controller();
 
-    
+
     const parallaxScene = new ScrollMagic.Scene({
         triggerElement: ".header",
         triggerHook: 0,
@@ -12,7 +12,7 @@ $(document).ready(function () {
         .setTween(".parallax-background", { y: "80%", ease: Linear.easeNone })
         .addTo(controller);
 
-    
+
     $(".image-item img").each(function () {
         const image = $(this);
         const revealScene = new ScrollMagic.Scene({
@@ -27,7 +27,7 @@ $(document).ready(function () {
     const navbar = document.querySelector(".navbar");
 
     window.addEventListener("scroll", function () {
-       
+
         if (window.scrollY > 740) {
             navbar.classList.add("scrolled")
 
@@ -59,16 +59,46 @@ $(document).ready(function () {
         })
 
         .setPin()
-        //  .addIndicators({ name: 'typewriting' })
         .setTween(typewritingOnScroll)
         .addTo(controllerp);
 
 
 
+    var controllerv = new ScrollMagic.Controller();
+
+
+    var scaleAnimation = gsap.to('.scaling-element', {
+        scale: 1.3,
+        duration: 1,
+        ease: 'power1.out',
+        paused: true,
+    });
+
+    let marginAnimation = gsap.to('.scaling-element', {
+        marginBottom: '20px',
+        duration: 1,
+        ease: 'power1.out',
+        paused: true,
+    });
 
 
 
 
+    new ScrollMagic.Scene({
+        triggerElement: '.scaling-element',
+        triggerHook: 0.5,
+        duration: '100%',
+    })
+        .setTween(scaleAnimation)
+        .addTo(controllerv);
+
+    new ScrollMagic.Scene({
+        triggerElement: '.scaling-element',
+        triggerHook: 0.5,
+        duration: '100%',
+    })
+        .setTween(marginAnimation)
+        .addTo(controllerv);
 
 
 

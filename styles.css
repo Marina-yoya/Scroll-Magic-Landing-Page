@@ -116,6 +116,7 @@ html {
     padding-top: 10px;
     margin-top: -30px;
     background-image: url("https://public.keskofiles.com/f/btt/ASSET_JPEG_24689812?q=75&fit=fill&h=250&w=250&auto=format");
+   
     background-position: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -154,6 +155,53 @@ html {
     display: none;
 }
 
+
+.container {
+    height: 100vh;
+   background-color: #f9f9f9;
+   margin-top: -20px;
+   
+  }
+
+  .container-title{
+    font-size: 24px;
+    margin-bottom: 100px;
+    padding-top: 50px;
+    text-align: center;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .scaling-element {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.5s, margin-bottom 0.5s;
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    background-color: #fff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+    margin-right: 100px; 
+  }
+  
+  .scaling-element img {
+    max-width: 200%;
+    width: auto;
+    max-height: 300px;
+  }
+  
+  
+  .scaling-element p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  
 
 .footer {
     background-color: #333;
