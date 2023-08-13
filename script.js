@@ -1,9 +1,9 @@
 
 
 $(document).ready(function () {
+
+
     const controller = new ScrollMagic.Controller();
-
-
     const parallaxScene = new ScrollMagic.Scene({
         triggerElement: ".header",
         triggerHook: 0,
@@ -39,7 +39,6 @@ $(document).ready(function () {
 
 
     let myText = document.querySelector(".p-hide").textContent;
-    console.log(myText)
     let myTextLength = myText.length;
 
     function typing(displayedLength) {
@@ -64,10 +63,8 @@ $(document).ready(function () {
 
 
 
-    var controllerv = new ScrollMagic.Controller();
-
-
-    var scaleAnimation = gsap.to('.scaling-element', {
+    let controllerv = new ScrollMagic.Controller();
+    let scaleAnimation = gsap.to('.scaling-element', {
         scale: 1.3,
         duration: 1,
         ease: 'power1.out',
@@ -80,8 +77,6 @@ $(document).ready(function () {
         ease: 'power1.out',
         paused: true,
     });
-
-
 
 
     new ScrollMagic.Scene({
@@ -99,6 +94,30 @@ $(document).ready(function () {
     })
         .setTween(marginAnimation)
         .addTo(controllerv);
+
+    $(".nav-list li:first-child a").on("click", function (e) {
+        e.preventDefault();
+        $("html, body").animate({
+            scrollTop: 0
+        }, 1000);
+    });
+
+    $(".nav-list li:nth-child(2) a").on("click", function (e) {
+        e.preventDefault();
+        let aboutSection = $("#about-section");
+        $("html, body").animate({
+            scrollTop: aboutSection.offset().top
+        }, 1000);
+    });
+
+    $(".nav-list li:nth-child(3) a").on("click", function (e) {
+        e.preventDefault();
+        let productSection = $("#product-container");
+        $("html, body").animate({
+            scrollTop: productSection.offset().top
+        }, 1000);
+    });
+
 
 
 

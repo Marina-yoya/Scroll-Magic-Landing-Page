@@ -104,7 +104,9 @@ html {
 
 .nav-list li a {
     text-decoration: none;
-    color: white
+    color: white;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
 }
 
 
@@ -201,6 +203,14 @@ html {
     font-size: 14px;
     color: #333;
   }
+
+
+  .logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+  }
+  
   
 
 .footer {
