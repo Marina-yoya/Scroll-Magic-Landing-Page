@@ -95,6 +95,18 @@ $(document).ready(function () {
         .setTween(marginAnimation)
         .addTo(controllerv);
 
+    const logo = $('.logo');
+    $(window).scroll(function () {
+        const scrollPosition = $(this).scrollTop();
+        const headerHeight = $('.header').outerHeight();
+
+        if (scrollPosition > headerHeight) {
+            logo.addClass('hidden');
+        } else {
+            logo.removeClass('hidden');
+        }
+    });
+
 
     $(".nav-list li:first-child a").on("click", function (e) {
         e.preventDefault();
@@ -116,6 +128,14 @@ $(document).ready(function () {
         let productSection = $("#product-container");
         $("html, body").animate({
             scrollTop: productSection.offset().top
+        }, 1000);
+    });
+
+    $(".nav-list li:nth-child(4) a").on("click", function (e) {
+        e.preventDefault();
+        let carousel = $(".carousel-section");
+        $("html, body").animate({
+            scrollTop: carousel.offset().top
         }, 1000);
     });
 
