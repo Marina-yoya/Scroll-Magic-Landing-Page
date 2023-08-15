@@ -95,6 +95,7 @@ $(document).ready(function () {
         .setTween(marginAnimation)
         .addTo(controllerv);
 
+
     $(".nav-list li:first-child a").on("click", function (e) {
         e.preventDefault();
         $("html, body").animate({
@@ -118,6 +119,47 @@ $(document).ready(function () {
         }, 1000);
     });
 
+
+    const carousel = $('.carousel-inner');
+    const images = $('.carousel-inner img');
+    let currentIndex = 0;
+    let scrollingEnabled = false;
+
+    function updateCarousel() {
+        images.each(function (index) {
+            const angleIncrement = 360 / (images.length / 2);
+            console.log(angleIncrement)
+            const angle = (index - currentIndex) * angleIncrement + angleIncrement / 2;
+            const opacity = Math.abs(angle) > 90 ? 0 : 1;
+
+            $(this).css({
+                transform: `rotateY(${angle}deg)`,
+                opacity: opacity
+            });
+        });
+    }
+
+    carousel.on('wheel', function (event) {
+        if (scrollingEnabled) {
+            event.preventDefault();
+
+            currentIndex = (currentIndex - Math.sign(event.originalEvent.deltaY) + images.length) % images.length;
+            updateCarousel();
+        }
+    });
+
+    carousel.on('mouseenter', function () {
+        scrollingEnabled = true;
+    });
+
+    carousel.on('mouseleave', function () {
+        scrollingEnabled = false;
+    });
+
+    images.eq(0).css({
+        transform: 'rotateY(0deg)',
+        opacity: 1
+    });
 
 
 
