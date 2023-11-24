@@ -7,118 +7,141 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Landing page with ScrollMagic animations</title>
+
+    <meta name="description" content="Landing page with ScrollMagic animations">
+
+    <meta property="og:title" content="Landing page with ScrollMagic animations">
+    <meta property="og:description" content="Landing page with ScrollMagic animations">
+    <meta property="og:url" content="winery.bg">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Landing page with ScrollMagic animations">
+    <meta name="twitter:description" content="Landing page with ScrollMagic animations">
+
+    <meta property="og:site_name" content="winery.bg">
+    <meta property="og:see_also" content="https://www.instagram.com/winery">
+    <meta property="og:see_also" content="https://www.facebook.com/winery/">
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="images/logo_small.png">
-        </div>
-        <ul class="nav-list">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Process</a></li>
-        </ul>
-    </nav>
-    <div class="header">
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo_small.png" alt="logo">
+            </div>
+            <ul class="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Process</a></li>
+            </ul>
+        </nav>
         <div class="parallax-background"></div>
         <div class="header-content">
         </div>
-    </div>
+    </header>
+
+    <main>
+
+        <section class="image-grid" id="about-section">
+            <figure class="image-item">
+                <img src="https://www.pulden.com/images/about/01-wine-history.jpg" alt="wine-history">
+            </figure>
+            <figure class="image-item">
+                <img src="https://www.pulden.com/images/about/02-wine-history.jpg" alt="wine-history">
+            </figure>
+            <figure class="image-item">
+                <img src="https://www.pulden.com/images/about/03-wine-history.jpg" alt="wine-history">
+            </figure>
+            <figure class="image-item">
+                <img src="https://www.pulden.com/images/about/04-wine-history.jpg" alt="wine-history">
+            </figure>
+        </section>
 
 
+        <section class="about">
+            <article class="about-us">
+                <h2>About us</h2>
+                <p id="text"></p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, earum. Est, nemo et! Quod,
+                    praesentium
+                    consequuntur magnam quas temporibus earum,
+                    uuntur magnam quas temporibus earum, magnam quas temporibus earum,
+                    dolore, perspiciatis eaque ullam neque eos est at nesciunt enim.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, earum. Est, nemo et! Quod,
+                    praesentium
+                    consequuntur magnam quas temporibus earum,
+                    dolore, perspiciatis eaque ullam neque eos est
+                    re, perspiciatis eaque ullam neque at nesciunt enim.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, earum. Est, nemo et! Quod,
+                    praesentium
+                    consequuntur magnam quas temporibus earum,ribus earum
+                    dolore, perspiciatis eaque ullam neque eos est at nesciunt enim.</p>
 
-    <div class="image-grid" id="about-section">
-        <div class="image-item">
-            <img src=https://www.pulden.com/images/about/01-wine-history.jpg alt="Image 1">
-        </div>
-        <div class="image-item">
-            <img src="https://www.pulden.com/images/about/02-wine-history.jpg" alt="Image 2">
-        </div>
-        <div class="image-item">
-            <img src="https://www.pulden.com/images/about/03-wine-history.jpg" alt="Image 3">
-        </div>
-        <div class="image-item">
-            <img src="https://www.pulden.com/images/about/04-wine-history.jpg" alt="Image 4">
-        </div>
-    </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, earum. Est, nemo et! Quod,
+                    praesentium
+                    consequuntur magnam quas temporibus earum,as temporibus
+                    dolore, perspiciatis eaque ullam neque eos est at nesciunt enim.</p>
+                <p class="p-hide">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, earum. Est, nemo
+                    et!
+                    Quod, praesentium
+                    consequuntur magnam quas temporibus earum,as temporibus
+                    dolore, perspiciatis eaque ullam neque eos est at nesciunt enim.</p>
 
-    <div class="about">
-        <article class="about-us">
-            <h2>About us</h2>
-            <p id="text"></p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, earum. Est, nemo et! Quod, praesentium
-                consequuntur magnam quas temporibus earum,
-                uuntur magnam quas temporibus earum, magnam quas temporibus earum,
-                dolore, perspiciatis eaque ullam neque eos est at nesciunt enim.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, earum. Est, nemo et! Quod, praesentium
-                consequuntur magnam quas temporibus earum,
-                dolore, perspiciatis eaque ullam neque eos est
-                re, perspiciatis eaque ullam neque at nesciunt enim.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, earum. Est, nemo et! Quod, praesentium
-                consequuntur magnam quas temporibus earum,ribus earum
-                dolore, perspiciatis eaque ullam neque eos est at nesciunt enim.</p>
+            </article>
+        </section>
 
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, earum. Est, nemo et! Quod, praesentium
-                consequuntur magnam quas temporibus earum,as temporibus
-                dolore, perspiciatis eaque ullam neque eos est at nesciunt enim.</p>
-            <p class="p-hide">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, earum. Est, nemo et!
-                Quod, praesentium
-                consequuntur magnam quas temporibus earum,as temporibus
-                dolore, perspiciatis eaque ullam neque eos est at nesciunt enim.</p>
-
-        </article>
-    </div>
-
-    <div class="container" id="product-container">
-        <h2 class="container-title">Our products</h2>
-        <div class="image-container">
-            <div class="scaling-element">
-                <img src="./images/2.Merlot_1989.jpg" alt="Image 1">
-                <p>Merlot</p>
+        <section class="container" id="product-container">
+            <h2 class="container-title">Our products</h2>
+            <div class="image-container">
+                <div class="scaling-element">
+                    <img src="./images/2.Merlot_1989.jpg" alt="bottle of Merlot_1989">
+                    <p>Merlot</p>
+                </div>
+                <div class="scaling-element">
+                    <img src="./images/2.Merlot_1989.jpg" alt="bottle of Merlot_1989">
+                    <p>Merlot</p>
+                </div>
+                <div class="scaling-element">
+                    <img src="./images/2.Merlot_1989.jpg" alt="bottle of Merlot_1989">
+                    <p>Merlot</p>
+                </div>
+                <div class="scaling-element">
+                    <img src="./images/2.Merlot_1989.jpg" alt="bottle of Merlot_1989">
+                    <p>Merlot</p>
+                </div>
+                <div class="scaling-element">
+                    <img src="./images/2.Merlot_1989.jpg" alt="bottle of Merlot_1989">
+                    <p>Merlot</p>
+                </div>
             </div>
-            <div class="scaling-element">
-                <img src="./images/2.Merlot_1989.jpg" alt="Image 1">
-                <p>Merlot</p>
+        </section>
+
+        <section class="carousel-section">
+            <div class="carousel">
+                <h1 class="carousel-title">How red wine is made step by step</h1>
+                <span class="scroll-text">Scroll down on top of the images to explore the process</span>
+                <div class="carousel-inner">
+                    <img src="./images/How-Red-Wine-Is-Made-harvest.png" alt="grapes harvest">
+                    <img src="./images/How-Red-Wine-Is-Made-destem-grapes.png" alt="destem grapes">
+                    <img src="./images/How-Red-Wine-Is-Made-add-yeast.png" alt="add-yeast">
+                    <img src="./images/How-Red-Wine-Is-Made-fermentation.png" alt="fermentation">
+                    <img src="./images/How-Red-Wine-Is-Made-Press.png" alt="press grapes">
+                    <img src="./images/How-Red-Wine-Is-Made-malolactic.png" alt="malolactic">
+                    <img src="./images/How-Red-Wine-Is-Made-oak-aging.png" alt="oak-aging">
+                    <img src="./images/How-Red-Wine-Is-Made-blending.png" alt="blending grapes">
+                    <img src="./images/How-Red-Wine-Is-Made-fining-filtering.png" alt="fining-filtering">
+                    <img src="./images/How-Red-Wine-Is-Made-bottling.png" alt="bottling">
+                    <img src="./images/How-Red-Wine-Is-Made-bottle-aging.png" alt="bottle-aging">
+                </div>
             </div>
-            <div class="scaling-element">
-                <img src="./images/2.Merlot_1989.jpg" alt="Image 1">
-                <p>Merlot</p>
-            </div>
-            <div class="scaling-element">
-                <img src="./images/2.Merlot_1989.jpg" alt="Image 1">
-                <p>Merlot</p>
-            </div>
-            <div class="scaling-element">
-                <img src="./images/2.Merlot_1989.jpg" alt="Image 1">
-                <p>Merlot</p>
-            </div>
-        </div>
-    </div>
-    
-    <div class="carousel-section">
-        <div class="carousel">
-            <h1 class="carousel-title">How red wine is made step by step</h1>
-            <span class="scroll-text">Scroll down on top of the images to explore the process</span>
-            <div class="carousel-inner">
-                <img src="./images/How-Red-Wine-Is-Made-harvest.png" alt="Image 1">
-                <img src="./images/How-Red-Wine-Is-Made-destem-grapes.png" alt="Image 2">
-                <img src="./images/How-Red-Wine-Is-Made-add-yeast.png" alt="Image 3">
-                <img src="./images/How-Red-Wine-Is-Made-fermentation.png" alt="Image 4">
-                <img src="./images/How-Red-Wine-Is-Made-Press.png" alt="Image 5">
-                <img src="./images/How-Red-Wine-Is-Made-malolactic.png" alt="Image 6">
-                <img src="./images/How-Red-Wine-Is-Made-oak-aging.png" alt="Image 7">
-                <img src="./images/How-Red-Wine-Is-Made-blending.png" alt="Image 8">
-                <img src="./images/How-Red-Wine-Is-Made-fining-filtering.png" alt="Image 8">
-                <img src="./images/How-Red-Wine-Is-Made-bottling.png" alt="Image 1">
-                <img src="./images/How-Red-Wine-Is-Made-bottle-aging.png" alt="Image 10">
-            </div>
-        </div>
-    </div>
+        </section>
+
+    </main>
 
     <footer class="footer">
-        <p>&copy; 2023 Website Name. All rights reserved.</p>
+        <p>&copy; 2023 All rights reserved.</p>
         <p>Designed by <a href="https://github.com/Marina-yoya/Scroll-Magic-Landing-Page">Marina Dimitrova</a></p>
     </footer>
 
